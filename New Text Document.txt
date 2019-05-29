@@ -1,0 +1,5 @@
+#/bin/sh
+
+reponame = $1
+test -z $reponame && echo"Repo Name required" 1>&2 && exit 1
+curl -u 'hj131998' https://api.github.com/user/repos -d "{\"name\":\"$repo_name\"}"
